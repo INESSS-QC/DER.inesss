@@ -1,5 +1,9 @@
 library(usethis)
 library(data.table)
+### Notes :
+### - <MaJ> indique la date à laquelle la description de l'environnement EI (RAMQ) a été
+###   utilisée pour la colonne <Variable RAMQ>.
+###
 
 
 # domaine_valeurs.fiches_techniques -------------------------------------------------------------
