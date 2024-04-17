@@ -10,7 +10,7 @@
 DER_inesss_update.addins <- function() {
 
   if (any("DER.inesss" == installed.packages()[,1])) {
-    return(DER.DER.inesss::DER_inesss_update())
+    return(DER.inesss::DER_inesss_update())
   } else if (any("inesss" == installed.packages()[,1])) {
     return(DER.inesss::DER_inesss_update())
   }
