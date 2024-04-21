@@ -1,6 +1,6 @@
 Package: DER.inesss
 Title: Institut National Excellence Sante Services Sociaux
-Version: 0.0.0.20240409
+Version: 0.0.20240421
 Authors@R: 
     person(given = "Guillaume",
            family = "Boucher",

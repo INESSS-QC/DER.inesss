@@ -2,7 +2,7 @@ library(usethis)
 library(odbc)
 library(data.table)
 library(askpass)
-library(inesss)
+library(DER.inesss)
 library(lubridate)
 library(stringr)
 color_text <- function(x) {return(crayon::italic(crayon::green(x)))}

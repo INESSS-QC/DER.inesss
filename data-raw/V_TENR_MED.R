@@ -1,7 +1,7 @@
 library(usethis)
 library(odbc)
 library(data.table)
-library(inesss)
+library(DER.inesss)
 color_text <- function(x) {return(crayon::italic(crayon::green(x)))}
 if (!exists("user")) {
   user <- askpass::askpass("User")
