@@ -100,7 +100,7 @@ domaine_valeurs <- function() {
       return(NULL)
     }
   }
-  header_MaJ_datas <- function(date_MaJ) {
+  header_MaJ_datas <- function(date_MaJ, show_msg = TRUE) {
     ### Indique la date à laquelle la table a été mise à jour : "Actualisé le JJ MM YYYY"
 
     # Mois en caractères
@@ -135,9 +135,11 @@ domaine_valeurs <- function() {
 
     # Indiquer s'il y a une mise à jour de disponible pour la DER
     update_msg <- ""
-    if (any("DER.inesss.tar.gz" == list.files("J:/GRP/A/5/A/Commun/0 Outils/Librairies R"))) {
-      if (date_MaJ < as.Date(file.info("J:/GRP/A/5/A/Commun/0 Outils/Librairies R/DER.inesss.tar.gz")$mtime)) {
-        update_msg <- " (MaJ disponible)"
+    if (show_msg) {
+      if (any("DER.inesss.tar.gz" == list.files("J:/GRP/A/5/A/Commun/0 Outils/Librairies R"))) {
+        if (as.Date(date_MaJ) < as.Date(file.info("J:/GRP/A/5/A/Commun/0 Outils/Librairies R/DER.inesss.tar.gz")$mtime)) {
+          update_msg <- " (MaJ disponible)"
+        }
       }
     }
 
@@ -487,7 +489,7 @@ domaine_valeurs <- function() {
         tabItem(
           tabName = "tabCIM",
           fluidRow(
-            header_MaJ_datas(attributes(DER.inesss::CIM)$MaJ),
+            header_MaJ_datas(attributes(DER.inesss::CIM)$MaJ, show_msg = FALSE),
             column(
               width = 12,
               strong("Répertoires des diagnostics"),
