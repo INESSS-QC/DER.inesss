@@ -16,7 +16,7 @@ fusion_periodes(dt, debut, fin, cols, njours = 1L)
 
 \item{cols}{Nom de la ou des colonnes indiquant en quoi consiste la période (codes d'identification d'individus ou de produits).}
 
-\item{njours}{Nombre de jours entre le début et la fin précédente (debut{i} - fin{i-1}). Voir examples. Par défaut 1.}
+\item{njours}{Nombre de jours entre le début et la fin précédente (debut\{i\} - fin\{i-1\}). Voir examples. Par défaut 1.}
 }
 \value{
 \code{data.table}

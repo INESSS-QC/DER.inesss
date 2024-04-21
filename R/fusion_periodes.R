@@ -8,7 +8,7 @@
 #' @param debut Nom de la colonne indiquant le début de la période.
 #' @param fin Nom de la colonne indiquant la fin de la période.
 #' @param cols Nom de la ou des colonnes indiquant en quoi consiste la période (codes d'identification d'individus ou de produits).
-#' @param njours Nombre de jours entre le début et la fin précédente (debut{i} - fin{i-1}). Voir examples. Par défaut 1.
+#' @param njours Nombre de jours entre le début et la fin précédente (debut\{i\} - fin\{i-1\}). Voir examples. Par défaut 1.
 #'
 #' @import data.table
 #'
