@@ -19,17 +19,16 @@ files_query_create <- function() {
 #' @encoding UTF-8
 #' @export
 query_V_FORME_MED <- function() {
-  return(cat("
+  return(paste0("
 
   SQLquery <- readLines("Automatisation-Compas/V_FORME_MED.sql")
   SQLquery <- str_replace_all(SQLquery, "\\t", "  ")
   SQLquery <- paste0("    \"",SQLquery)
   SQLquery[1:(length(SQLquery)-1)] <- paste0(SQLquery[1:(length(SQLquery)-1)], "\\n\",")
-  SQLquery[length(SQLquery)] <- paste0(SQLquery[length(SQLquery)], "\",")
+  SQLquery[length(SQLquery)] <- paste0(SQLquery[length(SQLquery)], "\"")
 
   end_fct <-
-"    sep = ''
-  ))
+"  ))
 }"
 
   writeLines(c(header, SQLquery, end_fct), "Automatisation-Compas/query_V_FORME_MED.R")
