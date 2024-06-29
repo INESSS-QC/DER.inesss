@@ -3198,6 +3198,6 @@ domaine_valeurs <- function() {
 
   # APPLICATION -------------------------------------------------------------
 
-  shinyApp(ui, server)
+  shinyApp(ui, server, options = list(launch.browser = TRUE))
 
 }
