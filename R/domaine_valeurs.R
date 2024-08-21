@@ -17,7 +17,6 @@ domaine_valeurs.addins <- function() {
 #' @importFrom lubridate as_date
 #'
 #' @encoding UTF-8
-#' @keywords internal
 #' @export
 domaine_valeurs <- function() {
 
