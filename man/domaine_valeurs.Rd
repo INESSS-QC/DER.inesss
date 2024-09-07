@@ -10,4 +10,3 @@ domaine_valeurs()
 \description{
 Domaine de valeurs de différentes bases de données disponibles dans le domaine de la santé, principalement à la RAMQ.
 }
-\keyword{internal}

@@ -62,6 +62,9 @@ DER_SQL_generateur <- function() {
 
   SERVER <- function(input, output, session) {
 
+    ### Fermer l'application lorsque la fenêtre se ferme
+    session$onSessionEnded(function() {stopApp()})
+
     observeEvent(input$ajouterMethod, {
       sql_code <- input$sqlEditor
       add_code <- stat_generales_1(
@@ -146,6 +149,6 @@ DER_SQL_generateur <- function() {
 
   }
 
-  shinyApp(UI, SERVER)
+  shinyApp(UI, SERVER, options = list(launch.browser = TRUE))
 
 }

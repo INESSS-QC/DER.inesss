@@ -17,7 +17,6 @@ domaine_valeurs.addins <- function() {
 #' @importFrom lubridate as_date
 #'
 #' @encoding UTF-8
-#' @keywords internal
 #' @export
 domaine_valeurs <- function() {
 
@@ -3198,6 +3197,6 @@ domaine_valeurs <- function() {
 
   # APPLICATION -------------------------------------------------------------
 
-  shinyApp(ui, server)
+  shinyApp(ui, server, options = list(launch.browser = TRUE))
 
 }

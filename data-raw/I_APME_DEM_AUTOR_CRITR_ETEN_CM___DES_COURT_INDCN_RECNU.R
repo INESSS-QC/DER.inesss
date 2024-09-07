@@ -11,7 +11,9 @@ if (!exists("user")) {
 if (!exists("pwd")) {
   pwd <- askpass::askpass()
 }
-conn <- SQL_connexion(user, pwd)
+if (is.null(conn)) {
+  conn <- SQL_connexion(user, pwd)
+}
 
 # Arguments ####
 loop_dates <- sort(c(
