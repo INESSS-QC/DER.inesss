@@ -1,3 +1,10 @@
+### Version 1.0.20241016
+
+#### 2024-10-16
+
+-   Mise à jour des tables
+    -   Domaine de valeurs
+
 ### Version 1.0.20240909
 
 #### 2024-09-09
