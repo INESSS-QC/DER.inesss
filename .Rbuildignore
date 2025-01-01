@@ -1,3 +1,5 @@
 ^DER\.inesss\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^batch-files$
+^Documentation$
