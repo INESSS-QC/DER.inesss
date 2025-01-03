@@ -3,3 +3,5 @@
 ^data-raw$
 ^batch-files$
 ^Documentation$
+^ToDo\.xlsx$
+^build_package\.R$
