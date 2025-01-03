@@ -13,6 +13,7 @@ domaine_valeurs.addins <- function() {
 #' @import data.table
 #' @import shiny
 #' @import shinydashboard
+#' @importFrom DT DTOutput renderDT
 #' @importFrom stringr str_sub str_pad str_remove str_detect str_split
 #' @importFrom lubridate as_date
 #'
@@ -382,7 +383,7 @@ domaine_valeurs <- function() {
               uiOutput("DES_COURT_INDCN_RECNU__go_reset_button"),
               uiOutput("DES_COURT_INDCN_RECNU__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("DES_COURT_INDCN_RECNU__dt")
+              DTOutput("DES_COURT_INDCN_RECNU__dt")
             ),
             tabPanel(
               title = "Fiche technique",
@@ -469,7 +470,7 @@ domaine_valeurs <- function() {
               uiOutput("V_DEM_PAIMT_MED_CM__go_reset_button"),
               uiOutput("V_DEM_PAIMT_MED_CM__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_DEM_PAIMT_MED_CM__dt")
+              DTOutput("V_DEM_PAIMT_MED_CM__dt")
             ),
 
             tabPanel(
@@ -512,7 +513,7 @@ domaine_valeurs <- function() {
               uiOutput("CIM__go_reset_button"),
               uiOutput("CIM__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("CIM__dt")
+              DTOutput("CIM__dt")
             )
           )
         ),
@@ -537,7 +538,7 @@ domaine_valeurs <- function() {
               uiOutput("V_CLA_AHF__go_reset_button"),
               uiOutput("V_CLA_AHF__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_CLA_AHF__dt")
+              DTOutput("V_CLA_AHF__dt")
             ),
             tabPanel(
               title = "Fiche technique",
@@ -571,7 +572,7 @@ domaine_valeurs <- function() {
               uiOutput("V_DENOM_COMNE_MED__go_reset_button"),
               uiOutput("V_DENOM_COMNE_MED__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_DENOM_COMNE_MED__dt")
+              DTOutput("V_DENOM_COMNE_MED__dt")
             ),
             tabPanel(
               title = "Fiche technique",
@@ -606,7 +607,7 @@ domaine_valeurs <- function() {
               uiOutput("V_FORME_MED__go_reset_button"),
               uiOutput("V_FORME_MED__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_FORME_MED__dt")
+              DTOutput("V_FORME_MED__dt")
             )
           )
         ),
@@ -648,7 +649,7 @@ domaine_valeurs <- function() {
               uiOutput("V_PRODU_MED__go_reset_button"),
               uiOutput("V_PRODU_MED__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_PRODU_MED__dt")
+              DTOutput("V_PRODU_MED__dt")
             ),
             tabPanel(
               title = "Fiche technique",
@@ -686,7 +687,7 @@ domaine_valeurs <- function() {
               uiOutput("V_TENR_MED__go_reset_button"),
               uiOutput("V_TENR_MED__save_button"),
               div(style = "margin-top:10px"),
-              dataTableOutput("V_TENR_MED__dt")
+              DTOutput("V_TENR_MED__dt")
             )
           )
         )
@@ -801,7 +802,7 @@ domaine_valeurs <- function() {
         }
       }, ignoreInit = TRUE
     )
-    output$DES_COURT_INDCN_RECNU__dt <- renderDataTable({
+    output$DES_COURT_INDCN_RECNU__dt <- renderDT({
       DES_COURT_INDCN_RECNU__dt()
     }, options = renderDataTable_options())
 
@@ -2094,7 +2095,7 @@ domaine_valeurs <- function() {
         }
       }
     )
-    output$V_DEM_PAIMT_MED_CM__dt <- renderDataTable({
+    output$V_DEM_PAIMT_MED_CM__dt <- renderDT({
       V_DEM_PAIMT_MED_CM__dt()
     }, options = renderDataTable_options())
 
@@ -2309,7 +2310,7 @@ domaine_valeurs <- function() {
         }
       }, ignoreInit = TRUE
     )
-    output$CIM__dt <- renderDataTable(CIM__dt(), options = renderDataTable_options())
+    output$CIM__dt <- renderDT(CIM__dt(), options = renderDataTable_options())
 
     ## Export ####
     output$CIM__save <- downloadHandler(
@@ -2460,7 +2461,7 @@ domaine_valeurs <- function() {
         }
       }, ignoreInit = TRUE
     )
-    output$V_CLA_AHF__dt <- renderDataTable({
+    output$V_CLA_AHF__dt <- renderDT({
       V_CLA_AHF__dt()
     }, options = renderDataTable_options())
 
@@ -2667,7 +2668,7 @@ domaine_valeurs <- function() {
         }
       }
     )
-    output$V_DENOM_COMNE_MED__dt <- renderDataTable({
+    output$V_DENOM_COMNE_MED__dt <- renderDT({
       V_DENOM_COMNE_MED__dt()
     }, options = renderDataTable_options())
 
@@ -2865,7 +2866,7 @@ domaine_valeurs <- function() {
         }
       }
     )
-    output$V_FORME_MED__dt <- renderDataTable({
+    output$V_FORME_MED__dt <- renderDT({
       V_FORME_MED__dt()
     }, options = renderDataTable_options())
 
@@ -3024,7 +3025,7 @@ domaine_valeurs <- function() {
         }
       }
     )
-    output$V_PRODU_MED__dt <- renderDataTable({
+    output$V_PRODU_MED__dt <- renderDT({
       V_PRODU_MED__dt()
     }, options = renderDataTable_options())
 
@@ -3163,7 +3164,7 @@ domaine_valeurs <- function() {
         }
       }
     )
-    output$V_TENR_MED__dt <- renderDataTable({
+    output$V_TENR_MED__dt <- renderDT({
       V_TENR_MED__dt()
     }, options = renderDataTable_options())
 

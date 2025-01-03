@@ -16,6 +16,7 @@ Imports:
     askpass,
     crayon,
     data.table,
+    DT,
     lubridate,
     miniUI,
     odbc,
