@@ -1,9 +1,5 @@
-## Mise à jour des tables
+# DER.inesss 1.0.20241120
 
-1.0.20250207  
-1.0.20250102  
-1.0.20241120  
-1.0.20241016  
-1.0.20240909  
-1.0.20240822  
-1.0.20240815
+-   Le fichier *MaJ_AAAA-MM-JJ.xlsx* indique les nouveaux codes DENOM et
+    DIN qui sont apparus entre la mise à jour et celle qui précédait.
+    Répertoire : `inst/v_dem_paimt_med_cm/Nouveaux Codes`.
