@@ -24,6 +24,7 @@ Imports:
     shinyAce,
     shinydashboard,
     stringr,
+    testthat,
     usethis,
     writexl
 VignetteBuilder: knitr

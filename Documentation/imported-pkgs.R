@@ -6,9 +6,10 @@ pgk <- c(
   "miniUI",
   "odbc",
   "shiny", "shinyAce", "shinydashboard", "stringr",
+  "testthat",
   "usethis",
   "writexl"
 )
 for (p in pgk) {
-  library(p, character.only = TRUE)
+  install.packages(p)
 }
