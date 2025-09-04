@@ -1,6 +1,6 @@
 Package: DER.inesss
 Title: Institut National Excellence Sante Services Sociaux
-Version: 1.0.20250709
+Version: 1.0.20250903
 Authors@R: 
     person(given = "Guillaume",
            family = "Boucher",
@@ -11,7 +11,7 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports:
     askpass,
     crayon,
