@@ -11,7 +11,7 @@ if (!exists("user")) {
 if (!exists("pwd")) {
   pwd <- askpass::askpass()
 }
-if (is.null(conn)) {
+if (!exists("conn") | is.null(conn)) {
   conn <- SQL_connexion(user, pwd)
 }
 
