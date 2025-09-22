@@ -20,6 +20,7 @@ Imports:
     lubridate,
     miniUI,
     odbc,
+    roxygen2,
     shiny,
     shinyAce,
     shinydashboard,
